@@ -54,7 +54,7 @@ export const CartProvider = ({ children }) => {
   const fetchCart = async () => {
     try {
       dispatch({ type: 'SET_LOADING', payload: true });
-      const response = await fetch('/api/cart');
+      const response = await fetch(`${process.env.REACT_APP_API_URL || ''}/api/cart`);
       if (response.ok) {
         const data = await response.json();
         dispatch({ type: 'SET_CART', payload: data });
@@ -68,7 +68,7 @@ export const CartProvider = ({ children }) => {
   // Add item to cart
   const addToCart = async (productId, quantity = 1) => {
     try {
-      const response = await fetch('/api/cart', {
+      const response = await fetch(`${process.env.REACT_APP_API_URL || ''}/api/cart`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -91,7 +91,7 @@ export const CartProvider = ({ children }) => {
   // Remove item from cart
   const removeFromCart = async (cartItemId) => {
     try {
-      const response = await fetch(`/api/cart/${cartItemId}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_URL || ''}/api/cart/${cartItemId}`, {
         method: 'DELETE',
       });
 
@@ -113,7 +113,7 @@ export const CartProvider = ({ children }) => {
   // Update cart quantity
   const updateCartQuantity = async (cartItemId, newQuantity) => {
     try {
-      const response = await fetch(`/api/cart/${cartItemId}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_URL || ''}/api/cart/${cartItemId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

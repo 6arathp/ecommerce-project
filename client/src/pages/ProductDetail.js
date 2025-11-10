@@ -13,7 +13,7 @@ const ProductDetail = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await fetch(`/api/products/${id}`);
+        const response = await fetch(`${process.env.REACT_APP_API_URL || ''}/api/products/${id}`);
         if (response.ok) {
           const data = await response.json();
           setProduct(data);
