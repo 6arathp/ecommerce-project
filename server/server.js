@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 5000;
 // Middleware
 const corsOptions = {
   origin: process.env.NODE_ENV === 'production' 
-    ? ['https://your-vercel-app.vercel.app', 'https://your-custom-domain.com']
+    ? ['https://ecommerce-project-psi-eight.vercel.app', 'https://your-custom-domain.com']
     : ['http://localhost:3000', 'http://localhost:3001'],
   credentials: true,
   optionsSuccessStatus: 200
