@@ -10,15 +10,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
-const corsOptions = {
-  origin: process.env.NODE_ENV === 'production' 
-    ? ['https://ecommerce-project-psi-eight.vercel.app', 'https://your-custom-domain.com']
-    : ['http://localhost:3000', 'http://localhost:3001'],
-  credentials: true,
-  optionsSuccessStatus: 200
-};
-
-app.use(cors(corsOptions));
+app.use(cors()); // Allow all origins
 app.use(express.json());
 
 // Routes
