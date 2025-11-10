@@ -1,5 +1,6 @@
 # E-Commerce MERN Stack Application
-
+## LINK: https://ecommerce-project-psi-eight.vercel.app/
+## BACKEND: https://ecommerce-project-sk37.onrender.com/
 A complete e-commerce web application built with MongoDB, Express.js, React.js, and Node.js.
 
 ## Features
