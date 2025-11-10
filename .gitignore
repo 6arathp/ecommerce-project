@@ -6,7 +6,7 @@ server/node_modules/
 # Production builds
 client/build/
 client/dist/
-
+acli
 # Environment variables
 .env
 .env.local
