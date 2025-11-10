@@ -77,7 +77,6 @@ export const CartProvider = ({ children }) => {
       });
 
       if (response.ok) {
-        const newItem = await response.json();
         // Refresh cart to get updated data
         fetchCart();
         return true;
